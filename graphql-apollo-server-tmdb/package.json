@@ -1,0 +1,21 @@
+{
+  "name": "tmdb-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --recursive"
+  },
+  "keywords": [],
+  "author": "David.myiptv.cloud",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.1",
+    "bluebird": "^3.5.0",
+    "graphql": "^16.2.0",
+    "moviedb": "^0.2.10"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
+}
