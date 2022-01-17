@@ -1,8 +1,21 @@
 import { gql } from "@apollo/client";
 
+
+
 export const GET_MOVIE_QUERY = gql`
-  query getMovieByName($name: String!) {
-    getMovieByName(name: $name) {
+
+        searchMovie: {
+          type: new graphql.GraphQLList(MovieResult),
+          args: {
+            query: {
+              name: 'query',
+              type: new graphql.GraphQLNonNull(graphql.GraphQLString)
+            }
+          },
+          resolve: SearchMovieResolver
+        }
+  query getSearchMovie($name: String!) {
+    getSearchMovie(name: $name) {
       page
       results {
         adult
