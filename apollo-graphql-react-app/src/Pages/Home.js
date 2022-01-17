@@ -30,13 +30,13 @@ function Home() {
           <>
             <h1> {data.getMovidByName.name} </h1>
             <h1>
-              {" "}
-              Temperature: {data.getMovidByName.movid.temperature.actual}
+              {"Movie Search "}
+              Title: {data.getMovidByName.movid.resultes.title}
             </h1>
             <h1>
-              Description: {data.getMovidByName.movid.summary.description}
+              Description: {data.getMovidByName.movid.resultes.overview}
             </h1>
-            <h1>Wind Speed: {data.getMovidByName.movid.wind.speed}</h1>
+            <h1>poster_path: {data.getMovidByName.movid.resultes.poster_path}</h1>
           </>
         )}
       </div>
