@@ -4,7 +4,7 @@ import { GET_MOVIE_QUERY } from "../graphql/Queries";
 
 function Home() {
   const [movieSearched, setMovieSearched] = useState("");
-  const [getMovie, { data, error }] = useLazyQuery(GET_MOVIE_QUERY, {
+  const [getSearchMovie, { data, error }] = useLazyQuery(GET_MOVIE_QUERY, {
     variables: { name: movieSearched },
   });
 
@@ -24,19 +24,19 @@ function Home() {
           setCitySearched(event.target.value);
         }}
       />
-      <button onClick={() => getMovie()}> Search</button>
+      <button onClick={() => getSearchMovie()}> Search</button>
       <div className="movid">
         {data && (
           <>
-            <h1> {data.getMovidByName.name} </h1>
+            <h1> {data.getSearchMovie.name} </h1>
             <h1>
               {"Movie Search "}
-              Title: {data.getMovidByName.movid.resultes.title}
+              Title: {data.getSearchMovie.movid.resultes.title}
             </h1>
             <h1>
-              Description: {data.getMovidByName.movid.resultes.overview}
+              Description: {data.getSearchMovie.movid.resultes.overview}
             </h1>
-            <h1>poster_path: {data.getMovidByName.movid.resultes.poster_path}</h1>
+            <h1>poster_path: {data.getSearchMovie.movid.resultes.poster_path}</h1>
           </>
         )}
       </div>
