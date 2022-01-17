@@ -3,31 +3,25 @@ import { gql } from "@apollo/client";
 export const GET_MOVIE_QUERY = gql`
   query getMovieByName($name: String!) {
     getMovieByName(name: $name) {
-      name
-      country
-      weather {
-        summary {
-          title
-          description
-          icon
+      page
+      results {
+        adult
+        backdrop_path
+        genre_ids
+          {id}
+        id
+        original_language
+        original_title
+        overview
+        poster_path
+        release_date
+        title
+        video
+        vote_average
+        vote_count
         }
-        temperature {
-          actual
-          feelsLike
-          min
-          max
-        }
-        wind {
-          speed
-          deg
-        }
-        clouds {
-          all
-          visibility
-          humidity
-        }
-        timestamp
-      }
+      total_pages
+      total_results
     }
   }
 `;
