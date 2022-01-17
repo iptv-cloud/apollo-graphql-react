@@ -8,7 +8,9 @@ export const GET_MOVIE_QUERY = gql`
         adult
         backdrop_path
         genre_ids
-          {id}
+          {
+          id
+          }
         id
         original_language
         original_title
