@@ -21,6 +21,7 @@ const ALL_MOVIES = gql`
     movies {
       title
       tagline
+      poster_path
       released
       actors {
         name
